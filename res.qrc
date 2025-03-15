@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/奶龙图片帧/nailong_left1.png</file>
+        <file>res/奶龙图片帧/nailong_left2.png</file>
+        <file>res/奶龙图片帧/nailong_left3.png</file>
+        <file>res/奶龙图片帧/nailong_left4.png</file>
+        <file>res/奶龙图片帧/nailong_left5.png</file>
+        <file>res/奶龙图片帧/nailong_right1.png</file>
+        <file>res/奶龙图片帧/nailong_right2.png</file>
+        <file>res/奶龙图片帧/nailong_right3.png</file>
+        <file>res/奶龙图片帧/nailong_right4.png</file>
+        <file>res/奶龙图片帧/nailong_right5.png</file>
+        <file>res/奶龙图片帧/nailong0.png</file>
+        <file>res/tile/bg2.png</file>
+        <file>res/tile/cave.png</file>
+        <file>res/tile/cave_horizontal.png</file>
+    </qresource>
+</RCC>

@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QKeyEvent>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -7,13 +8,35 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    character = new Character(this); // 创建 Character 对象
-    character->setGeometry(0, 0, this->width(), this->height()); // 设置 Character 的大小和位置
-    character->show(); // 显示 Character
+    // 创建游戏场景和视图
+    m_scene = new GameSence(this);
+    m_view = new QGraphicsView(m_scene, this);
+    m_view->setFixedSize(800, 600);
+    setCentralWidget(m_view);
 
+    // 启动游戏
+    m_scene->gamestart();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    switch (event->key()) {
+    case Qt::Key_Left:
+        // 使用公共访问函数获取 character 指针
+        m_scene->getCharacter()->move_left();
+        break;
+    case Qt::Key_Right:
+        m_scene->getCharacter()->move_right();
+        break;
+    case Qt::Key_Space:
+        m_scene->getCharacter()->jump();
+        break;
+    default:
+        QMainWindow::keyPressEvent(event);
+    }
 }

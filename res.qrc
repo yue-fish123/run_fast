@@ -11,8 +11,10 @@
         <file>res/奶龙图片帧/nailong_right4.png</file>
         <file>res/奶龙图片帧/nailong_right5.png</file>
         <file>res/奶龙图片帧/nailong0.png</file>
-        <file>res/tile/bg2.png</file>
-        <file>res/tile/cave.png</file>
-        <file>res/tile/cave_horizontal.png</file>
+        <file>res/scence/bg1.png</file>
+        <file>res/scence/bg2.png</file>
+        <file>res/scence/cave.png</file>
+        <file>res/scence/cave_horizontal.png</file>
+        <file>res/scence/spike.png</file>
     </qresource>
 </RCC>

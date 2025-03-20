@@ -1,10 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "character.h"
-#include "tile.h"
 #include <QMainWindow>
-#include <QGraphicsScene>
+#include "gamesence.h"
 #include <QGraphicsView>
 
 QT_BEGIN_NAMESPACE
@@ -21,10 +19,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private:
     Ui::MainWindow *ui;
-    Character *character;
-
-    Tile *m_tile;
+    QGraphicsView* m_view;  // 游戏视图
+    GameSence* m_scene;     // 游戏场景
 };
 #endif // MAINWINDOW_H
